@@ -7,7 +7,7 @@ This can be done using the following commands in your R terminal. Please run eac
 ```
 git branch
 
-git checkout dev
+git checkout main
 
 git pull origin main
 

@@ -1,21 +1,30 @@
 ## Want to Make Changes? <a name = 'want_to_make_changes'></a>
 
-If you want to make changes or contribute to the project, please ensure you create a new branch from the 'main' branch (which should contain the most up-to-date code) to make your edits and test their functionality.
+### Core Branches
+
+Before making changes, it is important to understand the core branches in the repository and how each should be treated:
+
+* `main` is the original branch and should never be edited directly. Only the `dev` branch should be merged into `main` periodically, to act as a backup of `dev`.
+* `dev` is branched off from `main` and acts as the primary working branch that other changes are merged into. It should not be edited directly either.
+
+### Making Changes
+
+If you want to make changes or contribute to the project, please ensure you create a new branch from the `dev` branch (which should contain the most up-to-date code) to make your edits and test their functionality.
 
 This can be done using the following commands in your R terminal. Please run each line one at a time:
 
 ```
 git branch
 
-git checkout main
+git checkout dev
 
-git pull origin main
+git pull origin dev
 
 git checkout -b <your new branch name>
 
 ```
 
-This should create a new local branch with the same code as the main branch (at the point of branching)
+This should create a new local branch with the same code as the `dev` branch (at the point of branching)
 
 If you want to push changes made in your test branch to the repository, please run the following line in your R terminal:
 
@@ -30,20 +39,20 @@ git push -u origin <your new branch name>
 
 Once you are happy with the changes and your test branch has been pushed to the remote repository, please oragnise another team member to peer review your code. 
 
-Once this has been done, get permission to merge your changes onto the main branch.
+Once this has been done, get permission to merge your changes onto the `dev` branch.
 
 A merge request can be created by pressing 'New merge request' in the Gitlab.
 
-Ensure that you set the 'source branch' as the name of your test branch and the 'target branch' as the 'main' branch. If you are unsure on how to deal with conflicts or any other changes in the merge request, reach out to a team member who will be able to advise you. Make sure to select 'Delete source branch' to delete your test branch after the merge.
+Ensure that you set the 'source branch' as the name of your test branch and the 'target branch' as the `dev` branch. If you are unsure on how to deal with conflicts or any other changes in the merge request, reach out to a team member who will be able to advise you. Make sure to select 'Delete source branch' to delete your test branch after the merge.
 
-Once everything is ready, press the 'Merge' button, and your changes will appear in the 'main' branch. 
+Once everything is ready, press the 'Merge' button, and your changes will appear in the `dev` branch. 
 
 
 ### Rebasing 
 
-Sometimes you will have instances where new updates or changes have been made to the 'main' branch. To prevent your branch from becoming out of date, you will want to rebase it with the most recent commits from 'main'.
+Sometimes you will have instances where new updates or changes have been made to the `dev` branch. To prevent your branch from becoming out of date, you will want to rebase it with the most recent commits from `dev`.
 
-Rebasing can be time-consuming if your code has diverged significantly from 'main'. For this reason, it's recommended to rebase your branch whenever a new merge occurs on 'main'. This will allow you to incorporate new changes from 'main' into your branch while preserving your own modifications.
+Rebasing can be time-consuming if your code has diverged significantly from `dev`. For this reason, it's recommended to rebase your branch whenever a new merge occurs on `dev`. This will allow you to incorporate new changes from `dev` into your branch while preserving your own modifications.
 
 To start the rebase, run the following lines of code in your R terminal. Please run each line one at a time:
 
@@ -54,7 +63,7 @@ git checkout <your new branch name>
 
 git fetch origin
 
-git rebase origin/main
+git rebase origin/dev
 
 ```
 
@@ -74,7 +83,7 @@ Could not apply ............. Rebase 1
 
 ```
 
-To resolve the conflicts, you will need to open the scipts that are listed in the terminal and find the conflict within them. In the above example, I have two conflicts denoted by 'CONFLICT'. If I then open the .......... script, I will find the conflicting code, which will be highlighted in the following style:
+To resolve the conflicts, you will need to open the scipts in your coding environment that are listed in the terminal and find the conflict within them. In the above example, I have two conflicts denoted by 'CONFLICT'. If I then open the .......... script, I will find the conflicting code, which will be highlighted in the following style:
 
 ```
 <<<<<<< HEAD

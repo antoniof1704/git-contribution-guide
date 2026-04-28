@@ -43,7 +43,7 @@ Ensure that the source branch is set to your test branch and the target branch i
 
 If you are unsure how to deal with conflicts or other changes within the merge request, contact a team member who will be able to advise.
 
-Both you and the person QA‑ing the work must complete an entry in the QA Log, specifically in the ‘Merge Request Log’. Instructions are provided on what information needs to be recorded: the **white** columns are completed by you, and the **yellow** columns by the QA reviewer. If any supporting assumptions or decisions have been made as part of this merge request, these should also be recorded in the ‘Assumptions & Decisions Log’ tab.
+Both you and the person QA‑ing the work must complete an entry in the [QA Log template](QA_Log_Template.xlsx), specifically in the ‘Merge Request Log’. Instructions are provided on what information needs to be recorded: the **white** columns are completed by you, and the **yellow** columns by the QA reviewer. If any supporting assumptions or decisions have been made as part of this merge request, these should also be recorded in the ‘Assumptions & Decisions Log’ tab.
 
 Once your code has been independently QA‑ed and all issues have been resolved, select ‘Merge’ and your changes will be merged into the dev branch.
 

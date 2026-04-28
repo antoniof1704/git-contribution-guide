@@ -37,15 +37,15 @@ git push -u origin <your new branch name>
 
 ```
 
-Once you are happy with the changes and your test branch has been pushed to the remote repository, please oragnise another team member to peer review your code. 
+Once you are happy with the changes and your test branch has been pushed to the remote repository, you will need to create a merge request by selecting ‘New merge request’ in GitLab.
 
-Once this has been done, get permission to merge your changes onto the `dev` branch.
+Ensure that the source branch is set to your test branch and the target branch is set to the dev branch. Assign a reviewer (the person who will be QA‑ing your work), and make sure to select ‘Delete source branch’ so that your test branch is removed after the merge.
 
-A merge request can be created by pressing 'New merge request' in the Gitlab.
+If you are unsure how to deal with conflicts or other changes within the merge request, contact a team member who will be able to advise.
 
-Ensure that you set the 'source branch' as the name of your test branch and the 'target branch' as the `dev` branch. If you are unsure on how to deal with conflicts or any other changes in the merge request, reach out to a team member who will be able to advise you. Make sure to select 'Delete source branch' to delete your test branch after the merge.
+Both you and the person QA‑ing the work must complete an entry in the QA Log, specifically in the ‘Merge Request Log’. Instructions are provided on what information needs to be recorded: the **white** columns are completed by you, and the **yellow** columns by the QA reviewer. If any supporting assumptions or decisions have been made as part of this merge request, these should also be recorded in the ‘Assumptions & Decisions Log’ tab.
 
-Once everything is ready, press the 'Merge' button, and your changes will appear in the `dev` branch. 
+Once your code has been independently QA‑ed and all issues have been resolved, select ‘Merge’ and your changes will be merged into the dev branch.
 
 
 ### Rebasing 

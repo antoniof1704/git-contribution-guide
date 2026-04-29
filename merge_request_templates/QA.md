@@ -42,7 +42,7 @@
 > Do **not** record assumptions, decisions, or limitations directly in this
 > merge request.  
 > All assumptions, decisions, and limitations must be recorded in the
-> **[Assumptions, Decisions & Limitations (AD&L) Log](AD&L%20Log%20Template.xlsx)**.
+> **[Assumptions, Decisions & Limitations (AD&L) Log](../AD&L%20Log%20Template.xlsx)**.
 
 > For each relevant AD&L entry, indicate in the log whether it has an accompanying
 > merge request and record the GitLab merge request ID where applicable.  

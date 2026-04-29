@@ -101,7 +101,7 @@ Code is QA’d systematically whenever a new merge request is created.
 
 To review QA on changes made to the codebase:
 - Check merge request descriptions, which follow the standard template below:
-  - **[QA Merge Request Template](.gitlab/merge_request_templates/QA.md)**
+  - **[QA Merge Request Template](./merge_request_templates/QA.md)**
 
 More detail on this process is provided in the next section.
 
@@ -154,7 +154,7 @@ Ensure:
 On the next screen:
 
 - Select “Choose a template”
-- Choose [QA Merge Request Template](.gitlab/merge_request_templates/QA.md), the standardised merge request template referenced in the Audit / QA section
+- Choose [QA Merge Request Template](./merge_request_templates/QA.md), the standardised merge request template referenced in the Audit / QA section
 - Complete the sections under **“Analyst”**
 - Assign a reviewer (the person who will be QA‑ing your work). The reviewer must complete the sections under **“QA reviewer”**.
 - Ensure **“Delete source branch”** is selected so that your test branch is removed once merged.

@@ -14,7 +14,6 @@ Provide a high-level summary of the project.
 ### Expected Timelines
 *Overall project timeline or key milestones*
 
----
 
 ## Access & Technology Requirements
 List any systems, tools, or permissions required to deliver the project.
@@ -25,17 +24,16 @@ List any systems, tools, or permissions required to deliver the project.
 - GitLab
 - [Add any additional systems]
 
----
 
 ## Information & Data Sources
 Details of where relevant files, data, and code are stored.
 
 ### Shared File Areas
-*List and link any shared file area for the project*
+*List and link any shared file areas for the project*
  
 ### Data Sources
 *Fill in the table to include name of data source and description of data*
----
+
 
 ## Key Outputs
 Define the primary deliverables produced by the project.
@@ -46,8 +44,6 @@ Define the primary deliverables produced by the project.
 - Code repositories
 - Documentation
 
----
-
 ## Key People
 List key contacts and contributors.
 
@@ -56,8 +52,6 @@ List key contacts and contributors.
 **Stakeholders:**
 
 **Analysts and Contributors:**  
-
----
 
 ## How to Run Analysis
 Provide detailed, step-by-step guidance on how to run the analysis.
@@ -74,14 +68,10 @@ Include:
 - Runtime assumptions
 - Dependencies between steps
 
----
-
 ## Caveats
 Provide a brief overview of assumptions, decisions, limitations or issues
 
 More information can be found in the next section which will have a full QA log, or a Starting Assumptions Log
-
----
 
 ## Audit / QA
 Links and guidance relating to quality assurance. The please refer

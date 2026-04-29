@@ -9,7 +9,7 @@
 
 ### Summary
 - Title of code changes:
-- Branch name:
+- Analyst name:
 
 ---
 

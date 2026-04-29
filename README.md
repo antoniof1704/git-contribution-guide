@@ -1,38 +1,45 @@
-
 # [Insert Project Name]
 
 ## Project Description
 Provide a high-level summary of the project.
 
 ### Purpose and Objectives
-*Describe the purpose of the project and what it aims to achieve*
+Describe the purpose of the project and what it aims to achieve.
 
 ### Scope and Key Deliverables
-*Define what is included and excluded from scope*
-*List key deliverables*
+Define what is included and excluded from scope.
+
+List key deliverables, for example:
+- Analytical outputs
+- Code deliverables
+- Documentation
 
 ### Expected Timelines
-*Overall project timeline or key milestones*
+Provide the overall project timeline or key milestones.
 
 
 ## Access & Technology Requirements
 List any systems, tools, or permissions required to deliver the project.
 
-- Access to RTI
-- CAF SharePoint
-- SFKCOUNT
-- GitLab
-- [Add any additional systems]
+| Role / Permission | Description |
+|------------------|-------------|
+|                  |             |
+|                  |             |
+|                  |             |
 
 
 ## Information & Data Sources
 Details of where relevant files, data, and code are stored.
 
 ### Shared File Areas
-*List and link any shared file areas for the project*
- 
+List and link any shared file areas for the project.
+
 ### Data Sources
-*Fill in the table to include name of data source and description of data*
+
+| Data Source Name | Description |
+|------------------|-------------|
+|                  |             |
+|                  |             |
 
 
 ## Key Outputs
@@ -44,23 +51,22 @@ Define the primary deliverables produced by the project.
 - Code repositories
 - Documentation
 
+
 ## Key People
 List key contacts and contributors.
 
-**Project Lead:** 
+**Project Lead:**  
+Name / role
 
-**Stakeholders:**
+**Stakeholders:**  
+Name / role
 
 **Analysts and Contributors:**  
+Name / role
+
 
 ## How to Run Analysis
 Provide detailed, step-by-step guidance on how to run the analysis.
-
-### Steps
-1. Step 1 – e.g. Pull latest source data
-2. Step 2 – e.g. Run data preparation scripts
-3. Step 3 – e.g. Execute modelling / analysis
-4. Step 4 – e.g. Generate outputs and QA results
 
 Include:
 - Script locations
@@ -68,22 +74,36 @@ Include:
 - Runtime assumptions
 - Dependencies between steps
 
-## Caveats
-Provide a brief overview of assumptions, decisions, limitations or issues
 
-More information can be found in the next section which will have a full QA log, or a Starting Assumptions Log
+## Caveats
+Provide a brief overview of key assumptions, decisions, or limitations.
+
+More detailed and formal records of assumptions, decisions, and limitations can be found in the **Assumptions, Decisions & Limitations (AD&L) Log**.
+
 
 ## Audit / QA
-Links and guidance relating to quality assurance. The please refer
 
-- **Full QA Log:** 
-- **Starting/Baseline Assumptions Log**
+### Assumptions, Decisions & Limitations Log
+- **[AD&L Log Template](AD&L%20Log%20Template.xlsx)**:  Use this log to record all assumptions, decisions, and limitations.
 
-Include:
-- QA approach
-- Checks performed
-- Sign-off or review process
+**Guidance:**
+- Prior to starting the analysis, record any **starting / baseline assumptions** in the AD&L Log.
+- Any new assumptions, decisions, or limitations identified during the analysis must also be recorded in the log.
+- Where an assumption, decision, or limitation relates to a code change, the associated **GitLab merge request ID** must be recorded in the log (where prompted).
 
+
+### Code QA via Merge Requests
+
+Code is QA’d systematically whenever a new merge request is created.
+
+- QA is documented directly in the merge request description using a **standardised template**
+- Assumptions, decisions, and limitations relating to a merge request are recorded **only** in the AD&L Log (not in the merge request description)
+
+To review QA on changes made to the codebase:
+- Check merge request descriptions, which follow the standard template below:
+  - **[QA Merge Request Template](.gitlab/merge_request_templates/QA.md)**
+
+More detail on this process is provided in the next section.
 
 
 ## Want to Make Changes? <a name = 'want_to_make_changes'></a>
@@ -92,8 +112,8 @@ Include:
 
 Before making changes, it is important to understand the core branches in the repository and how each should be treated:
 
-* `main` is the original branch and should never be edited directly. Only the `dev` branch should be merged into `main` periodically, to act as a backup of `dev`.
-* `dev` is branched off from `main` and acts as the primary working branch that other changes are merged into. It should not be edited directly either.
+- `main` is the original branch and should never be edited directly. Only the `dev` branch should be merged into `main` periodically, to act as a backup of `dev`.
+- `dev` is branched off from `main` and acts as the primary working branch that other changes are merged into. It should not be edited directly either.
 
 ### Making Changes
 
@@ -125,15 +145,27 @@ git push -u origin <your new branch name>
 
 ```
 
-Once you are happy with the changes and your test branch has been pushed to the remote repository, you will need to create a merge request by selecting ‘New merge request’ in GitLab.
+Once your branch has been pushed to the remote repository, create a merge request by selecting **“New merge request”** in GitLab.
+Ensure:
 
-Ensure that the source branch is set to your test branch and the target branch is set to the dev branch. Assign a reviewer (the person who will be QA‑ing your work), and make sure to select ‘Delete source branch’ so that your test branch is removed after the merge.
+- The source branch is your test branch
+- The target branch is dev (or whichever branch you are merging into)
 
-If you are unsure how to deal with conflicts or other changes within the merge request, contact a team member who will be able to advise.
+On the next screen:
 
-Both you and the person QA‑ing the work must complete an entry in the [QA Log template](QA_Log_Template.xlsx), specifically in the ‘Merge Request Log’. Instructions are provided on what information needs to be recorded: the **white** columns are completed by you, and the **yellow** columns by the QA reviewer. If any supporting assumptions or decisions have been made as part of this merge request, these should also be recorded in the ‘Assumptions & Decisions Log’ tab.
+- Select “Choose a template”
+- Choose [QA Merge Request Template](.gitlab/merge_request_templates/QA.md), the standardised merge request template referenced in the Audit / QA section
+- Complete the sections under **“Analyst”**
+- Assign a reviewer (the person who will be QA‑ing your work). The reviewer must complete the sections under **“QA reviewer”**.
+- Ensure **“Delete source branch”** is selected so that your test branch is removed once merged.
 
-Once your code has been independently QA‑ed and all issues have been resolved, select ‘Merge’ and your changes will be merged into the dev branch.
+*NOTE: The merge request description can be edited before the merge is completed, but not after the merge has occurred. All QA must therefore be completed prior to merging.*
+
+Any assumptions, decisions, or limitations arising from the change must be recorded in the AD&L Log (linked in the QA template), including the merge request ID.
+
+If you are unsure how to deal with conflicts or other issues within a merge request, contact a team member who will be able to advise.
+
+Once the code has been independently QA‑ed and all issues resolved, select “Merge” to merge your changes into dev.
 
 
 ### Rebasing 
